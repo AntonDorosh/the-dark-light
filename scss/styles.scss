@@ -4,55 +4,214 @@ $accent-dark-blue-color: #1B3764;
 $accent-yellow-color: #FFCA42;
 $main-text-color: #969AA0;
 
+%header-button {
+  background-color: $accent-yellow-color;
+  font-size: 19px;
+  letter-spacing: 0.57px;
+  text-transform: capitalize;
+  color: $accent-dark-blue-color;
+  transition: all .3s ease-in-out;
+}
 h1, h2, h3, h4, h5, h6, p, a, span, ul, li {
   margin: 0;
   padding: 0;
 }
-
 address {
   font-style: normal;
 }
-
 a {
   text-decoration: none;
-  color: #000000;
 }
-
 ul {
   list-style: none;
   padding-left: 0;
 }
-
 body {
   background-color: #ffffff;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  max-width: 1440px;
+  font-family: $main-text-font;
 }
-
-button {
+.button {
   font-family: $heading-text-font;
   cursor: pointer;
   padding: 18px 52px;
   border: 2px solid $accent-yellow-color;
-  font-weight: 400;
   line-height: 28px;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.pointer {
+  width: 1px;
+  height: 1px;
+  background-color: $accent-yellow-color;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
 }
 
 .header {
   background-color: $accent-dark-blue-color;
-  color: #ffffff;
+  padding: 15px 0;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  &-left,
+  &-right {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+  &-button {
+    @extend %header-button;
+  }
+  &-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+  }
+}
+.social__nav {
+  &-list {
+    display: flex;
+    gap: 10px;    
+  }
+  &-item {
+    background-color: #ffffff;
+    transition: all .3s ease-in-out;
+  }
+  &-item:hover {
+    background-color: $accent-yellow-color;
+    transform: scale(1.1);
+  }
+  &-svg {
+    padding: 15px;
+  }
+}
+.menu__nav {
+  &-items {
+    display: flex;
+    gap: 40px;
+  }
+  &-link {
+    font-size: 17px;
+    line-height: 26px;
+    letter-spacing: 0.17px;
+    color: #F6F8FC;
+  }
+  &-link:hover {
+    color: $accent-yellow-color;
+  }
+  &-svg path {
+    fill: #000000;
+  }
+  &-svg path:hover {
+    fill: $accent-yellow-color;
+  }
+  &-current {
+    color: $accent-yellow-color;
+  }
 }
 
-.menu__cart {
+.header__content {
+  &-inner {
+    display: flex;
+    margin-top: 100px;
+  }
+  &-text {
+    padding: 147px 25px;
+    font-family: 'Cardo';
+    color: #ffffff;
+  }
+  &-line {
+    width: 35px;
+    background-color: $accent-yellow-color;
+    height: 2px;
+    display: inline-block;
+    position: relative;
+    bottom: 6px;
+  }
+  &-text--top {
+    display: inline-block;
+    font-size: 21px;
+    line-height: 36px;
+    letter-spacing: 1.2px;
+    text-transform: capitalize;
+    margin-left: 14px;
+  }
+  &-text--bottom {
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 28px;
+    color: $main-text-color;
+    padding: 52px 0;
+    max-width: 605px;
+  }
+  &-title {
+    font-size: 64px;
+    line-height: 78px;
+    letter-spacing: 1.3px;
+    padding-top: 10px;
+  }
+  &-link {
+    margin-left: 50px;
+    font-size: 19px;
+    line-height: 30px;
+    letter-spacing: 0.38px;
+    text-transform: capitalize;
+    border-bottom: 1px solid $main-text-color;
+    padding: 5px 0;
+    color: #FFFFFF;
+  }
+  &-link:hover {
+    color: $accent-yellow-color;
+  }
+  &-button {
+    @extend %header-button;
+  }
+  &-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+  }
   &-img {
-    fill: black;
-  }
-  &-img:hover {
-    fill: white;
+    margin-right: 20px;
   }
 }
 
-.footer {
-  background-color: $accent-dark-blue-color;
+.header__features {
+  &-list {
+    display: flex;
+    gap: 67px;
+    margin-top: 40px;
+  }
+  &-item {
+    position: relative;
+  }
+  &-title {
+    display: block;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.48px;
+    
+  }
+  &-descr {
+    font-family: $main-text-font;
+    display: block;
+    font-size: 17px;
+    line-height: 27px;
+    color: #B4C7E7;
+    padding-top: 12px;
+  }
+  &-decor {
+    padding: 7px;
+    margin-right: 10px;
+  }
 }
+
+
