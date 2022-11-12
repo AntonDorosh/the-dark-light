@@ -1,2 +1,2 @@
 # the-dark-light
-landing + bem + media query
+landing + bem + media query + scss
