@@ -1,3 +1,58 @@
 $main-text-font: 'Inter', sans-serif;
 $heading-text-font: 'Cardo', serif;
+$accent-dark-blue-color: #1B3764;
+$accent-yellow-color: #FFCA42;
+$main-text-color: #969AA0;
 
+h1, h2, h3, h4, h5, h6, p, a, span, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: $heading-text-font;
+  cursor: pointer;
+  padding: 18px 52px;
+  border: 2px solid $accent-yellow-color;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.header {
+  background-color: $accent-dark-blue-color;
+  color: #ffffff;
+}
+
+.menu__cart {
+  &-img {
+    fill: black;
+  }
+  &-img:hover {
+    fill: white;
+  }
+}
+
+.footer {
+  background-color: $accent-dark-blue-color;
+}
