@@ -56,9 +56,9 @@ body {
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1360px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 30px;
 }
 
 .title {
@@ -137,6 +137,7 @@ body {
 .social__nav-item {
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
+  border-radius: 30%;
 }
 .social__nav-item:hover {
   background-color: #FFCA42;
@@ -228,13 +229,10 @@ body {
   background-color: #ffffff;
   transform: scale(1.1);
 }
-.header__content-img {
-  margin-right: 20px;
-}
 
 .header__features-list {
   display: flex;
-  gap: 67px;
+  justify-content: space-between;
   margin-top: 40px;
 }
 .header__features-item {
@@ -935,6 +933,21 @@ body {
   color: #FFCA42;
 }
 
+@media (max-width: 1260px) {
+  .header__content-img {
+    width: 50%;
+    height: 50%;
+  }
+  .header__content-title {
+    font-size: 3rem;
+  }
+  .header__content-button.button {
+    width: 40%;
+  }
+  .header__content-text {
+    padding: 100px 15px;
+  }
+}
 @media (max-width: 1100px) {
   .header__top {
     flex-direction: column;
@@ -946,6 +959,44 @@ body {
   .button {
     width: 25%;
   }
+  .header__content-text {
+    padding: 10px 10px;
+    flex: 1;
+  }
+  .header__content-img {
+    width: 40%;
+    height: 40%;
+    flex: 1;
+  }
+  .header__content-inner {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 940px) {
+  .header__content-text--bottom {
+    padding: 20px 0;
+  }
+  .header__features-list {
+    max-width: 93%;
+  }
+  .header__content-title {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+}
+@media (max-width: 900px) {
+  .header__content-inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .header__content-text {
+    width: 95%;
+  }
+  .header__content-img {
+    width: 75%;
+    height: 75%;
+  }
 }
 @media (max-width: 700px) {
   .header__top-right {
@@ -954,6 +1005,15 @@ body {
   }
   .button {
     width: 60%;
+  }
+  .header__top-button {
+    display: none;
+  }
+  .header__content-button.button {
+    width: 50%;
+  }
+  .header__features-list {
+    max-width: 100%;
   }
 }
 @media (max-width: 500px) {
@@ -974,5 +1034,31 @@ body {
   }
   .logo {
     width: 100%;
+  }
+  .header__content-link {
+    display: block;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    width: 50%;
+  }
+  .header__content-button.button {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .header__content-text {
+    height: 100vh;
+  }
+  .header__content-text--bottom {
+    font-size: 1.5rem;
+  }
+  .header__features-list {
+    display: none;
+  }
+  .header__content-img {
+    width: 100%;
+  }
+  .header__content-title {
+    font-size: 3rem;
+    line-height: 60px;
   }
 }
