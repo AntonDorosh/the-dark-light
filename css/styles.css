@@ -1147,9 +1147,6 @@ body {
     width: 100%;
     margin-top: 30px;
   }
-  .header__content-text {
-    height: 100vh;
-  }
   .header__content-text--bottom {
     font-size: 1.5rem;
   }
@@ -1200,10 +1197,6 @@ body {
   }
   .books__atomic {
     border-bottom: 1px solid #FFCA42;
-    height: 110vh;
     padding-bottom: 20px;
-  }
-  .books__dark {
-    height: 110vh;
   }
 }
