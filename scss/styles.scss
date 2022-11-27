@@ -17,7 +17,7 @@ $background-section-color: #F5F8FC;
   background: transparent;
   color: $accent-dark-blue-color;
   letter-spacing: 0.38px;
-  
+
 }
 .button {
   font-family: $heading-text-font;
@@ -76,8 +76,11 @@ body {
     height: 4px;
     background-color: $accent-yellow-color;
     position: absolute;
-    
+
   }
+}
+.author__about-contact.only-media {
+  display: none;
 }
 
 .pointer {
@@ -141,7 +144,7 @@ body {
 .social__nav {
   &-list {
     display: flex;
-    gap: 10px;    
+    gap: 10px;
   }
   &-item {
     background-color: #ffffff;
@@ -244,7 +247,7 @@ body {
     background-color: #ffffff;
     transform: scale(1.1);
   }
-  
+
 }
 
 .header__features {
@@ -379,8 +382,8 @@ body {
   &__about-item--border {
     border-left: 1px solid $accent-yellow-color;
     border-right: 1px solid $accent-yellow-color;
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 26px;
+    padding-right: 26px;
   }
   &__item-quantity {
     font-family: $heading-text-font;
@@ -965,6 +968,38 @@ body {
   .books-wrapper {
     align-items: center;
   }
+
+  .author {
+    &__about {
+      padding-left: 25px;
+      flex: 1;
+      &-text {
+        margin-top: 20px;
+        font-size: 17px;
+      }
+      &-contact {
+        margin-top: 20px;
+      }
+      &-items {
+        margin-top: 5px;
+      }
+    }
+
+    &__inner {
+      padding: 100px 30px;
+    }
+    &__inner-decor {
+      display: none;
+    }
+    &__inner-img {
+      flex: 1;
+    }
+    &-img {
+      bottom: 0;
+      right: 0;
+      max-width: 100%;
+    }
+  }
 }
 
 @media (max-width: 1100px) {
@@ -1017,7 +1052,43 @@ body {
     font-size: 1.5rem;
   }
 
+  .author {
+    &__inner {
+      padding: 60px 15px;
+    }
+    &__about {
+      padding-top: 20px;
+      &-item--border {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      &-contact {
+        margin-top: 10px;
+        padding: 5px 13px;
+      }
+    }
+    &__item-quantity {
+      line-height: 50px;
+    }
+    &__contact {
+      padding: 5px 15px;
+
+      &-qr {
+        width: 35%;
+        height: 35%;
+      }
+      &-text {
+        padding: 9px 0 11px 13px;
+      }
+      &-subtitle,
+      &-link {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+  }
 }
+
 @media (max-width: 940px) {
   .header__content-text--bottom {
     padding: 20px 0;
@@ -1032,6 +1103,34 @@ body {
   .books-decription {
     gap: 5px;
   }
+  .author {
+    &__inner {
+      flex-direction: column-reverse;
+      align-items: center;
+      &-img {
+        margin-top: 30px;
+      }
+    }
+    &__about {
+      max-width: 100%;
+      &-contact {
+        display: none;
+      }
+      &-items {
+        margin-top: 30px;
+      }
+      &-item--border {
+        border: none;
+      }
+      &-title {
+        text-align: center;
+      }
+    }
+  }
+  .author__about-contact.only-media {
+    display: flex;
+  }
+
 }
 @media (max-width: 900px) {
   .header__content-inner {
@@ -1072,7 +1171,7 @@ body {
   }
   .books__title {
     margin-top: 50px;
-  } 
+  }
   .books-button {
     margin-top: 30px;
   }
@@ -1083,6 +1182,12 @@ body {
   .books-img {
     width: 50%;
     height: 50%;
+  }
+  .author {
+    &__inner {
+      padding: 30px 10px;
+    }
+
   }
 }
 
@@ -1120,6 +1225,9 @@ body {
 }
 
 @media (max-width: 500px) {
+  .container {
+    padding: 0 15px;
+  }
   .header__top-left {
     flex-direction: column;
     gap: 20px;
@@ -1199,5 +1307,29 @@ body {
   .books__atomic {
     border-bottom: 1px solid $accent-yellow-color;
     padding-bottom: 20px;
+  }
+  .author {
+    &__about-items,
+    &__inner-img {
+      margin-top: 10px;
+    }
+    &__about {
+      padding-left: 0;
+    }
+    &__item-quantity {
+      font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .author__contact-subtitle {
+    margin-top: 5px;
+  }
+  .author__contact-qr {
+    width: 30%;
+  }
+  .author__contact-text {
+    padding: 0 0 0 13px;
   }
 }
