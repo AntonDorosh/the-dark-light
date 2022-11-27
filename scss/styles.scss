@@ -1118,6 +1118,8 @@ body {
       }
       &-items {
         margin-top: 30px;
+        justify-content: center;
+        gap: 50px;
       }
       &-item--border {
         border: none;

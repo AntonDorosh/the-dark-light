@@ -1111,6 +1111,8 @@ body {
   }
   .author__about-items {
     margin-top: 30px;
+    justify-content: center;
+    gap: 50px;
   }
   .author__about-item--border {
     border: none;
