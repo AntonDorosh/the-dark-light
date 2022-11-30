@@ -266,8 +266,7 @@ body {
   display: flex;
   margin-top: 10px;
   padding: 60px 15px;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 .books-wrapper {
   display: flex;
@@ -428,8 +427,7 @@ body {
   display: flex;
   margin-top: 40px;
   text-align: center;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
+  column-gap: 16px;
 }
 .best__inner-subtitle {
   color: #1B3764;
@@ -461,19 +459,26 @@ body {
   bottom: 0;
 }
 .get__inner-left {
-  padding: 55px 130px 55px 0;
+  max-width: 478px;
+  flex: 1;
+  padding-top: 40px;
+}
+.get__inner-img {
+  flex: 1;
 }
 .get__inner-text {
   font-size: 19px;
   line-height: 28px;
   color: #B4C7E7;
   margin-top: 27px;
+  width: 400px;
 }
 .get__inner-button {
   color: #FFFFFF;
   background: transparent;
   margin-top: 27px;
   letter-spacing: 0.4px;
+  width: 60%;
 }
 .get__inner-button:hover {
   transform: scale(1.1);
@@ -497,8 +502,8 @@ body {
 }
 .learn-img {
   position: relative;
-  bottom: 30px;
-  right: 30px;
+  bottom: -42px;
+  right: 22px;
   z-index: 2;
 }
 .learn__title {
@@ -564,8 +569,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   margin-top: 60px;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+  column-gap: 30px;
   row-gap: 40px;
 }
 .vision__inner-chapter {
@@ -820,20 +824,6 @@ body {
   color: #1B3764;
   font-family: "Inter", sans-serif;
 }
-.updates__inner-form input[type=email]::-moz-placeholder {
-  font-size: 18px;
-  line-height: 31px;
-  letter-spacing: 0.18px;
-  color: #B4C7E7;
-  padding: 10px;
-}
-.updates__inner-form input[type=email]:-ms-input-placeholder {
-  font-size: 18px;
-  line-height: 31px;
-  letter-spacing: 0.18px;
-  color: #B4C7E7;
-  padding: 10px;
-}
 .updates__inner-form input[type=email]::placeholder {
   font-size: 18px;
   line-height: 31px;
@@ -959,8 +949,7 @@ body {
   }
   .books__inner {
     padding: 40px 15px;
-    -moz-column-gap: 0;
-         column-gap: 0;
+    column-gap: 0;
   }
   .books-button.button {
     width: 95%;
@@ -999,6 +988,9 @@ body {
     bottom: 0;
     right: 0;
     max-width: 100%;
+  }
+  .best {
+    padding: 90px 50px;
   }
 }
 @media (max-width: 1100px) {
@@ -1081,6 +1073,18 @@ body {
     font-size: 14px;
     line-height: 26px;
   }
+  .get__inner {
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  .get__inner-img {
+    width: 50%;
+    height: 50%;
+    padding-top: 25px;
+  }
+  .get__inner-button {
+    width: 80%;
+  }
 }
 @media (max-width: 940px) {
   .header__content-text--bottom {
@@ -1123,6 +1127,27 @@ body {
   .author__about-contact.only-media {
     display: flex;
   }
+  .best {
+    padding: 60px 30px;
+  }
+  .best__inner-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .best__inner-item {
+    max-width: 370px;
+  }
+  .get__inner {
+    padding: 40px 0;
+  }
+  .get__inner-text {
+    margin-top: 0;
+    width: 350px;
+  }
+  .get__inner-img {
+    width: 53%;
+    padding-top: 30px;
+  }
 }
 @media (max-width: 900px) {
   .header__content-inner {
@@ -1139,6 +1164,18 @@ body {
   }
   .books-title {
     font-size: 2rem;
+  }
+  .best {
+    padding: 50px 0;
+  }
+  .best__inner-item {
+    max-width: 300px;
+  }
+  .best__inner-items {
+    row-gap: 25px;
+  }
+  .get__inner-left {
+    width: 300px;
   }
 }
 @media (max-width: 700px) {
@@ -1177,6 +1214,33 @@ body {
   }
   .author__inner {
     padding: 30px 10px;
+  }
+  .best__inner-item {
+    border-bottom: 1px solid #FFCA42;
+    padding-bottom: 25px;
+    max-width: 400px;
+  }
+  .best__inner-items {
+    row-gap: 20px;
+    margin-top: 0;
+  }
+  .best__inner-items li:nth-child(4) {
+    border-bottom: none;
+  }
+  .get__inner {
+    padding: 0;
+    flex-direction: column;
+  }
+  .get__inner-img {
+    width: 90%;
+    align-self: center;
+  }
+  .get__inner-text {
+    width: 100%;
+  }
+  .get__inner-left {
+    width: 100%;
+    max-width: 100%;
   }
 }
 @media (max-width: 600px) {
@@ -1304,6 +1368,9 @@ body {
   .author__item-quantity {
     font-size: 40px;
   }
+  .get__inner, .get__inner-title {
+    text-align: center;
+  }
 }
 @media (max-width: 400px) {
   .author__contact-subtitle {
@@ -1318,4 +1385,6 @@ body {
   .author__about-contact {
     padding: 2px 2px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
